@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: eddynootebospipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: eddynootebospipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: eddynootebospipelinesjavascriptdocker 
+          image: eddycontainerregistry.azurecr.io/eddynootebospipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
